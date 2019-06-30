@@ -1,7 +1,6 @@
 import React, { ChangeEvent, MouseEvent, useReducer, useState } from 'react'
 
 // https://www.sumologic.com/blog/usereducer-react-hook-typescript/
-
 type Todos = {
   text: string
   completed: boolean
@@ -29,6 +28,8 @@ const reducer = (state: State, action: Action) => {
 
 const Todos: React.FC = () => {
   const initialState: State = { todos: [], todoCount: 0 }
+
+  // 🔥 Reducer Hook: lets you manage local state of complex components with a reducer
   const [state, dispatch] = useReducer(reducer, initialState)
   const [text, setText] = useState('')
 

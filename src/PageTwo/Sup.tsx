@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 
 const Sup: React.FC = () => {
-  // useEffect is analagous to componentDidMount
+  // ⚡️ Effect Hook: adds the ability to perform side effects from a function component
+  // It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount
   useEffect(() => {
     // this lambda function will be called at each render (or re-render)
     console.log('render')

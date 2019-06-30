@@ -11,8 +11,8 @@ const login = async () => {
 }
 
 const UseContext: React.FC = () => {
-  // useContext accepts a context object (return from createContext)
-  // returns current context value for given context
+  // ↩ Context Hook: lets you subscribe to React context without introducing nesting
+  // useContext accepts a context object (return from createContext) returns current context value for given context
   const { user, setUser } = useContext(UserContext)
 
   const handleLogin = async () => {
