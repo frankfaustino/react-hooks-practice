@@ -1,4 +1,4 @@
-import React, { ChangeEvent, MouseEvent, useState } from 'react'
+import { ChangeEvent, MouseEvent, useState } from 'react'
 
 interface UseFormReturnValue {
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void
