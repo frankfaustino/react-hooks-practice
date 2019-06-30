@@ -14,19 +14,15 @@ interface InitialValues {
 export const useForm = (callback: () => InitialValues): UseFormReturnValue => {
   const [values, setValues] = useState(callback)
 
-  const handleSubmit = (cb: () => void) => (event: MouseEvent<HTMLButtonElement>) => {
-    if (event) event.preventDefault()
-    cb()
-  }
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    event.persist()
-    setValues(values => ({ ...values, [event.target.name]: event.target.value }))
-  }
-
   return {
-    handleChange,
-    handleSubmit,
+    handleChange: (event: ChangeEvent<HTMLInputElement>) => {
+      event.persist()
+      setValues(values => ({ ...values, [event.target.name]: event.target.value }))
+    },
+    handleSubmit: (cb: () => void) => (event: MouseEvent<HTMLButtonElement>) => {
+      event.preventDefault()
+      cb()
+    },
     values
   }
 }
