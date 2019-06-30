@@ -1,4 +1,4 @@
-import React, { MouseEvent, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 const Sup: React.FC = () => {
   // useEffect is analagous to componentDidMount

@@ -11,7 +11,7 @@ interface InitialValues {
   password: string
 }
 
-export const useForm = (callback: () => InitialValues): UseFormReturnValue => {
+const useForm = (callback: () => InitialValues): UseFormReturnValue => {
   const [values, setValues] = useState(callback)
 
   return {
@@ -26,3 +26,5 @@ export const useForm = (callback: () => InitialValues): UseFormReturnValue => {
     values
   }
 }
+
+export default useForm
